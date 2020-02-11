@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88A899"
+    tools:context=".IpvaActivity">
+
+    <Button
+        android:id="@+id/btnCalcularIpva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txvResultadoIpva"
+        app:layout_constraintStart_toStartOf="@+id/txvResultadoIpva"
+        app:layout_constraintTop_toBottomOf="@+id/txvResultadoIpva" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Cálculo do IPVA"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Preencha os campos abaixo para calular o IPVA:"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtValorIpva"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/edtValorIpva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Valor IPVA"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/spnEstadosIpva"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/txvResultadoIpva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcularIpva"
+        app:layout_constraintEnd_toEndOf="@+id/spnEstadosIpva"
+        app:layout_constraintStart_toStartOf="@+id/spnEstadosIpva"
+        app:layout_constraintTop_toBottomOf="@+id/spnEstadosIpva" />
+
+    <Spinner
+        android:id="@+id/spnEstadosIpva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/txvResultadoIpva"
+        app:layout_constraintEnd_toEndOf="@+id/edtValorIpva"
+        app:layout_constraintStart_toStartOf="@+id/edtValorIpva"
+        app:layout_constraintTop_toBottomOf="@+id/edtValorIpva" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="151dp"
+        android:layout_height="139dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:srcCompat="@drawable/carro" />
+</androidx.constraintlayout.widget.ConstraintLayout>
