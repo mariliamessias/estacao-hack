@@ -11,7 +11,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtUsuarioLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,12 +19,9 @@
         app:srcCompat="@drawable/logo_cellep_branco" />
 
     <EditText
-        android:id="@+id/edtUsuario"
-        android:layout_width="0dp"
+        android:id="@+id/edtUsuarioLogin"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
         android:backgroundTint="#ffffff"
         android:ems="10"
         android:hint="Usuário"
@@ -32,48 +29,23 @@
         android:textAlignment="center"
         android:textColor="#EEFFFFFF"
         android:textColorHint="#EEFFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtSenhaLogin"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <EditText
-        android:id="@+id/edtSenhaCadastro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#ffffff"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/edtUsuario"
-        app:layout_constraintStart_toStartOf="@+id/edtUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsuario" />
-
     <Button
-        android:id="@+id/btnEntrar"
-        android:layout_width="0dp"
+        android:id="@+id/btnEntrarLogin"
+        android:layout_width="211dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="100dp"
         android:background="#ffffff"
         android:text="Entrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
-
-    <Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="#ffffff"
-        android:text="Cadastrar"
-        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
-        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
-        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarLogin"
+        app:layout_constraintEnd_toEndOf="@+id/edtSenhaLogin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edtSenhaLogin"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaLogin" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -83,16 +55,47 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvResultadoLogin"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/logo_hack" />
 
     <TextView
-        android:id="@+id/txvResultado"
-        android:layout_width="wrap_content"
+        android:id="@+id/txvResultadoLogin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastrarLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnCadastrarLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrarLogin" />
+
+    <Button
+        android:id="@+id/btnCadastrarLogin"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/txvResultadoLogin"
+        app:layout_constraintEnd_toEndOf="@+id/btnEntrarLogin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnEntrarLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrarLogin" />
+
+    <EditText
+        android:id="@+id/edtSenhaLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntrarLogin"
+        app:layout_constraintEnd_toEndOf="@+id/edtUsuarioLogin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edtUsuarioLogin"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsuarioLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,12 +19,13 @@
         android:textColorHint="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/edtSenhaCadastro"
         app:layout_constraintEnd_toEndOf="@+id/edtSobrenomeCadastro"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/edtSobrenomeCadastro"
         app:layout_constraintTop_toBottomOf="@+id/edtSobrenomeCadastro" />
 
     <EditText
         android:id="@+id/edtSobrenomeCadastro"
-        android:layout_width="0dp"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
         android:ems="10"
@@ -34,7 +35,7 @@
         android:textColorHint="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/edtEmailCadastro"
         app:layout_constraintEnd_toEndOf="@+id/edtNomeCadastro"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/edtNomeCadastro"
         app:layout_constraintTop_toBottomOf="@+id/edtNomeCadastro" />
 
@@ -57,45 +58,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-    <EditText
-        android:id="@+id/edtSenhaCadastro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColorHint="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/spnSexo"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmailCadastro"
-        app:layout_constraintStart_toStartOf="@+id/edtEmailCadastro"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailCadastro" />
-
     <Spinner
-        android:id="@+id/spnSexo"
-        android:layout_width="0dp"
+        android:id="@+id/spnSexoCadastro"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarCadastro"
         app:layout_constraintEnd_toEndOf="@+id/edtSenhaCadastro"
         app:layout_constraintStart_toStartOf="@+id/edtSenhaCadastro"
         app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
 
     <Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="0dp"
+        android:id="@+id/btnCadastrarCadastro"
+        android:layout_width="211dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
         android:background="#ffffff"
         android:text="Cadastrar"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnSexo" />
+        app:layout_constraintEnd_toEndOf="@+id/spnSexoCadastro"
+        app:layout_constraintStart_toStartOf="@+id/spnSexoCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/spnSexoCadastro" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -107,4 +90,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_person_ad_white_24dp" />
+
+    <EditText
+        android:id="@+id/edtSenhaCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/spnSexoCadastro"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmailCadastro"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edtEmailCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailCadastro" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

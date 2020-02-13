@@ -4,39 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#25367c"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txvSexoMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sexo do Fulano"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnSairMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/txvEmailMain" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txvNomeMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nome do fulano"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/txvEmailMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txvSejaBemVindoMain" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txvSejaBemVindoMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -46,48 +46,48 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/txvNomeMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txvEmailMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email do Fulano"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/txvSexoMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/txvNomeMain" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSiteMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Site CELLEP"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintEnd_toEndOf="@+id/btnSairMain"
+        app:layout_constraintStart_toStartOf="@+id/btnSairMain"
+        app:layout_constraintTop_toBottomOf="@+id/btnSairMain" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSairMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
         android:text="Sair"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnSiteMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txvSexoMain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
