@@ -1,5 +1,6 @@
 package br.com.mariliamessias.estacaohack
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -23,8 +24,13 @@ class LoginActivity : AppCompatActivity() {
             }else if(usuario !=  "admin" || senha != "123"){
                 Toast.makeText(this@LoginActivity, "Usuário ou senha inválido", Toast.LENGTH_SHORT).show()
             }else {
-                Toast.makeText(this@LoginActivity, "Usuário e senha corretos! :)", Toast.LENGTH_SHORT).show()
+
+                //Toast.makeText(this@LoginActivity, "Usuário e senha corretos! :)", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btnCadastrarLogin.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, CadastroActivity::class.java))
         }
     }
 }
