@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CalculoActivity">
+
+    <ImageView
+        android:id="@+id/txvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="32dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_texto" />
+
+    <TextView
+        android:id="@+id/txvAltura"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Altura"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/skbAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitulo" />
+
+    <TextView
+        android:id="@+id/txvPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Peso"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/skbPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/skbAltura"
+        app:layout_constraintTop_toBottomOf="@+id/skbAltura" />
+
+    <SeekBar
+        android:id="@+id/skbAltura"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:max="300"
+        app:layout_constraintBottom_toTopOf="@+id/txvPeso"
+        app:layout_constraintEnd_toStartOf="@+id/txvAlturaValor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/txvAltura"
+        app:layout_constraintTop_toBottomOf="@+id/txvAltura" />
+
+    <SeekBar
+        android:id="@+id/skbPeso"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:max="300000"
+        app:layout_constraintBottom_toTopOf="@+id/spnSexo"
+        app:layout_constraintEnd_toStartOf="@+id/txvPesoValor"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/txvPeso"
+        app:layout_constraintTop_toBottomOf="@+id/txvPeso" />
+
+    <Spinner
+        android:id="@+id/spnSexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/skbPeso"
+        app:layout_constraintTop_toBottomOf="@+id/skbPeso" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#A2C4D6"
+        android:text="CALCULAR"
+        app:layout_constraintBottom_toTopOf="@+id/btnTabela"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnSexo" />
+
+    <Button
+        android:id="@+id/btnTabela"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#A2C4D6"
+        android:text="TABELA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+    <TextView
+        android:id="@+id/txvAlturaValor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:text="0 m"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/skbAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/skbAltura"
+        app:layout_constraintTop_toTopOf="@+id/skbAltura" />
+
+    <TextView
+        android:id="@+id/txvPesoValor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:hint="0"
+        android:text="0 kg"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/skbPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/skbPeso"
+        app:layout_constraintTop_toTopOf="@+id/skbPeso" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
